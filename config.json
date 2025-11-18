@@ -2,38 +2,29 @@
   "inbounds": [
     {
       "port": 10000,
+      "listen": "0.0.0.0",
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "f2310509-089f-467a-baab-cec3123982c5"
+            "id": "9cfefc1d-8b50-4245-a14f-373e57c56e6b", 
+            "level": 0
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "http",
-            "response": {
-              "version": "1.1",
-              "status": "200",
-              "reason": "OK",
-              "headers": {
-                "Content-Type": ["application/octet-stream"],
-                "Server": ["nginx"]
-              }
-            }
-          }
+        "network": "ws",
+        "wsSettings": {
+          "path": "/"
         }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "settings": {}
     }
   ]
 }
