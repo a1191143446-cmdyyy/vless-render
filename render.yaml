@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: vless-service
+    env: docker
+    docker:
+      dockerfile: Dockerfile
+    envVars:
+      - key: RENDER_SERVICE_TYPE
+        value: web
